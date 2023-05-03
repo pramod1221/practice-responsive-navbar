@@ -1,0 +1,57 @@
+/* Some global settings */
+:root {
+  --white: white;
+  --black: black;
+  --blue: blue;
+  --lightgray: lightgray;
+  --font-family: 'Helvetica', sans-serif;
+  --base-size: 1rem;
+  --max-width:1920px;
+  --scroll-top-padding: 6em;
+}
+
+::selection {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+html {
+  scroll-padding-top: var(--scroll-top-padding);
+}
+
+body {
+  background-color: var(--lightgray);
+  color: var(--black);
+  font-family: var(--font-family);
+  padding-top: var(--scroll-top-padding);
+  min-height: 100em;
+}
+
+/* Small devices (upto 576px) */
+@media only screen and (max-width: 576px) {
+  /* Redefine variables for small devices here */
+  /* :root {
+  
+  } */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Some utility */
+.max--width {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+.global--x-padding {
+  padding-inline: 2em;
+}
+.global--y-padding {
+  padding-block: 1em;
+}
+.this--hide {
+  display: none !important;
+}
+.this--show {
+  display: block !important;
+}

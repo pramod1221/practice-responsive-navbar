@@ -1,0 +1,1 @@
+# A simple responsive navbar using plain CSS and some basic JS

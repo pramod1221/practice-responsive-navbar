@@ -1,0 +1,116 @@
+@import 'reset.css';
+@import 'globals.css';
+
+.header {
+  background-color: var(--white);
+  position: fixed;
+  width:100%;
+  top:0;
+  /* transition: top 500ms; */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.toggle-button {
+  display: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  position: absolute;
+  right:2em;
+  top:1.75em;
+}
+
+.toggle__bars {
+  height: 3px;
+  width: 100%;
+  background-color: var(--black);
+  border-radius: 10px;
+}
+
+.navbar-links {
+  flex:1;
+}
+
+.navbar-links ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.navbar-links ul li a {
+  display: block;
+  padding: 1em;
+}
+
+.navbar-links ul li a:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+main div {
+  min-height: 100vh;
+}
+
+/* Small devices (upto 576px) */
+@media only screen and (max-width: 576px) {
+  .toggle-button {
+    display: flex;
+  }
+  .toggle-button span {
+    transition: transform 500ms;
+  }
+  .toggle-button--close span:nth-child(1){
+    transform:translateY(9px) rotate(45deg);
+  }
+  .toggle-button--close span:nth-child(2){
+    transform:scaleX(0);
+  }
+  .toggle-button--close span:nth-child(3){
+    transform:translateY(-9px) rotate(-45deg);
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar-links {
+    width:100%;
+    /* display: none; */
+  }
+  .navbar-links ul {
+    width:100%;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 500ms;
+  }
+  .navbar-links ul li {
+    width:100%;
+    text-align: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* .header--out {
+    top: -6em;
+  } */
+}
+
+/* Some modifier classes */
+
+.navbar--active ul {
+  max-height: 100vh;
+}
